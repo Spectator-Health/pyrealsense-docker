@@ -14,7 +14,7 @@ docker run \
 	--volume="/dev:/dev" `# enable access to USB (req'd for Intel camera device)` \
 	--volume="/lib/modules:/lib/modules" \
 	--cap-add=ALL \
-	$1 `# additional CLI arguments (e.g. additional volumes to mount)` \
+	$@ `# additional CLI arguments (e.g. additional volumes to mount)` \
 	spectatorhealth/realsense:pi4-py37 bash -il 
 
 xhost -local:root
